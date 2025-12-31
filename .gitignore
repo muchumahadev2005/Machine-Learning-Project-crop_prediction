@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyo
+*.pyd
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Model files (optional, if you DON'T want to push them)
+*.pkl
+
+# Streamlit cache
+.streamlit/
+
+# Virtual env
+venv/
+env/
