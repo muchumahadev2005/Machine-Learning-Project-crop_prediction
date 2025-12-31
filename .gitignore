@@ -12,7 +12,7 @@ Thumbs.db
 desktop.ini
 
 # Model files (optional, if you DON'T want to push them)
-*.pkl
+
 
 # Streamlit cache
 .streamlit/
