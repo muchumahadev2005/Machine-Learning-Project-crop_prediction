@@ -1,0 +1,155 @@
+# 🌾 Crop Recommendation System
+
+A machine learning–based system that recommends the most suitable crop to grow based on soil and environmental conditions.
+
+---
+
+## 📌 Project Overview
+
+The **Crop Recommendation System** uses machine learning to analyze soil nutrients and environmental factors and then suggests the best crop to grow. This helps farmers and planners make **data-driven, scientific decisions** to improve productivity and optimize land use.
+
+---
+
+## 🎯 Objectives
+
+- Recommend the best crop using machine learning.
+- Improve crop yield and support better decision making.
+- Utilize environmental and soil data effectively.
+- Provide an automated, intelligent decision support system for agriculture.
+
+---
+
+## 🧠 Problem Statement
+
+Farmers often face difficulties in choosing the right crop because of:
+
+- Changing climate conditions  
+- Lack of awareness about soil nutrients  
+- Unpredictable rainfall  
+- Limited access to scientific tools  
+
+This system addresses these issues by analyzing:
+
+- Nitrogen (N)  
+- Phosphorus (P)  
+- Potassium (K)  
+- Temperature  
+- Humidity  
+- Soil pH  
+- Rainfall  
+
+and then recommending the **most suitable crop** for those conditions.
+
+---
+
+## 📂 Dataset Description
+
+The project uses a **Crop Recommendation Dataset** in CSV format.
+
+### 🔑 Features
+
+| Feature      | Description                          |
+|-------------|--------------------------------------|
+| N           | Nitrogen content in soil             |
+| P           | Phosphorus content in soil           |
+| K           | Potassium content in soil            |
+| temperature | Atmospheric temperature              |
+| humidity    | Humidity level                       |
+| ph          | Soil acidity (pH value)              |
+| rainfall    | Annual/seasonal rainfall             |
+| label       | Crop name (target variable)          |
+
+- **Input (X):** N, P, K, temperature, humidity, ph, rainfall  
+- **Target (y):** label (crop name)
+
+---
+
+## 🛠️ Technologies Used
+
+- **Language:** Python  
+
+**Libraries:**
+
+- Pandas  
+- NumPy  
+- Seaborn  
+- Matplotlib  
+- Scikit-learn  
+- Joblib  
+
+---
+
+## 🔍 Methodology / Workflow
+
+1. **Data Loading**  
+   - Load CSV dataset using Pandas.  
+   - Inspect rows, columns, and basic statistics.
+
+2. **Data Preprocessing**  
+   - Check for missing values.  
+   - Check for and remove duplicate entries.  
+   - (Optional) Scale/normalize features if needed.
+
+3. **Exploratory Data Analysis (EDA)**  
+   - Plot histograms for feature distributions.  
+   - Plot correlation heatmap between features.
+
+4. **Feature & Label Separation**  
+   - `X = [N, P, K, temperature, humidity, ph, rainfall]`  
+   - `y = label` (crop name)
+
+5. **Label Encoding**  
+   - Convert crop names to numeric labels using `LabelEncoder`.
+
+6. **Train–Test Split**  
+   - 80% training data, 20% testing data using `train_test_split`.
+
+7. **Model Building**  
+   Train multiple algorithms:
+   - Random Forest  
+   - Naive Bayes  
+   - Support Vector Machine (SVM)  
+   - Decision Tree  
+   - K-Nearest Neighbors (KNN)
+
+8. **Model Evaluation**  
+   - Accuracy score  
+   - Cross-validation score  
+   - Classification report  
+   - Confusion matrix  
+
+9. **Best Model Selection**  
+   - Select the model with highest accuracy and best generalization.  
+   - In most cases, **Random Forest** performs best.
+
+10. **Model Saving**  
+   - Save model using Joblib:
+     - `crop_model.pkl`  
+     - `label_encoder.pkl`
+
+---
+
+## 📈 Model Performance
+
+The system compares models using:
+
+- Test accuracy  
+- Cross-validation score  
+
+and additionally shows:
+
+- Classification report  
+- Confusion matrix  
+
+This ensures:
+
+- Reliable prediction  
+- Reduced overfitting  
+- Strong accuracy  
+
+---
+
+## 💾 Usage
+
+1. Load the saved model and encoder:
+
